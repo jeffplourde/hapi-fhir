@@ -28,8 +28,8 @@ import org.apache.commons.lang3.Validate;
 public class FifoMemoryPagingProvider implements IPagingProvider {
 
 	private LinkedHashMap<String, IBundleProvider> myBundleProviders;
-	private int myDefaultPageSize=10;
-	private int myMaximumPageSize=50;
+	private int myDefaultPageSize=100;
+	private int myMaximumPageSize=200000;
 	private int mySize;
 
 	public FifoMemoryPagingProvider(int theSize) {

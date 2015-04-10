@@ -137,7 +137,7 @@ public class ResourceProviderDstu1Test {
 		assertEquals(100, found.getTotalResults().getValue().intValue());
 		assertEquals(10, found.getEntries().size());
 
-		found = ourClient.search().forResource(Organization.class).where(Organization.NAME.matches().value("testCountParam_01")).limitTo(999).execute();
+		found = ourClient.search().forResource(Organization.class).where(Organization.NAME.matches().value("testCountParam_01")).limitTo(50).execute();
 		assertEquals(100, found.getTotalResults().getValue().intValue());
 		assertEquals(50, found.getEntries().size());
 
